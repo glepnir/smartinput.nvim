@@ -1,6 +1,6 @@
 # smartinput.nvim
 
-smart input
+change your input char to any you want.
 
 # usage
 
@@ -11,4 +11,9 @@ require('smartinput').setup {
 }
 ```
 
-then type `;` in go file you will see `:=` then type `;` you will see `;`
+# how it work
+
+rule is  `['go'] = { ';',':=',';'}` . this rule mean you first type `;` in go 
+
+file you will get `:=`,type `;` second you will get `;`.
+
