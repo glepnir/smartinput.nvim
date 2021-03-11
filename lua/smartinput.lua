@@ -36,7 +36,6 @@ function sinput.setup(rules)
   for ft,rule in pairs(rules) do
     local input,loop1,loop2 = rule[1],rule[2],rule[3]
     local str = head ..ft ..lhs..input..rhs..loop1 .."','"..loop2.."')"
-    print(str)
     vim.cmd(str)
   end
 end
