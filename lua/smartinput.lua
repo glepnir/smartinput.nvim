@@ -32,10 +32,11 @@ function sinput.setup(rules)
   local head = "autocmd Filetype "
   local lhs = " inoremap <buffer><expr> "
   local rhs = " v:lua.smart_input_loop('"
+  local tail = "')"
 
   for ft,rule in pairs(rules) do
     local input,loop1,loop2 = rule[1],rule[2],rule[3]
-    local str = head ..ft ..lhs..input..rhs..loop1 .."','"..loop2.."')"
+    local str = head ..ft ..lhs..input..rhs..loop1 .."','"..loop2..tail
     vim.cmd(str)
   end
 end
